@@ -25,6 +25,7 @@ NUMBER_OF_QUESTIONS = 100
 
 Answer.delete_all
 Question.delete_all
+UserTest.delete_all
 Test.delete_all
 User.delete_all
 Category.delete_all
@@ -65,3 +66,4 @@ puts 'Answer created'
 100.times do
   UserTest.create!(user_id: user_ids.sample, test_id: test_ids.sample)
 end
+puts 'UserTest created'
