@@ -30,40 +30,42 @@ Test.delete_all
 User.delete_all
 Category.delete_all
 
+categories = []
 NUMBER_OF_CATEGORIES.times do
-  Category.create!(title: Faker::Educator.primary_school)
+  categories << Category.create!(title: Faker::Educator.primary_school)
 end
 puts 'Catergory created'
 
+users = []
 NUMBER_USERS.times do
-  User.create!(name: Faker::FunnyName.two_word_name)
+  users << User.create!(name: Faker::FunnyName.two_word_name)
 end
-category_ids = Category.pluck(:id)
-user_ids = User.pluck(:id)
+
+tests = []
 NUMBER_OF_TESTS.times do
-  Test.create!(title: Faker::Educator.subject,
+  tests << Test.create!(title: Faker::Educator.subject,
                level: rand(1..NUBER_OF_LEVELS),
-               category_id: category_ids.sample,
-               author_id: user_ids.sample)
+               category: categories.sample,
+               author: users.sample)
 end
 puts 'Test created'
 
-test_ids = Test.pluck(:id)
+questions = []
 NUMBER_OF_QUESTIONS.times do
-  Question.create!(body: Faker::Lorem.question(word_count: 4),
-                   test_id: test_ids.sample)
+  questions << Question.create!(body: Faker::Lorem.question(word_count: 4),
+                   test: tests.sample)
 end
 puts 'Question created'
 
-Question.pluck(:id).each do |question_id|
+questions.each do |question|
   2.times do
-    Answer.create!(body: Faker::Lorem.word, correct: false, question_id: question_id)
+    Answer.create!(body: Faker::Lorem.word, correct: false, question: question)
   end
-  Answer.create!(body: Faker::Games::WorldOfWarcraft.hero, correct: true, question_id: question_id)
+  Answer.create!(body: Faker::Games::WorldOfWarcraft.hero, correct: true, question: question)
 end
 puts 'Answer created'
 
 100.times do
-  UserTest.create!(user_id: user_ids.sample, test_id: test_ids.sample)
+  UserTest.create!(user: users.sample, test: tests.sample)
 end
 puts 'UserTest created'
