@@ -19,7 +19,7 @@
 
 NUMBER_OF_CATEGORIES = 5
 NUBER_OF_LEVELS = 5
-NUMBER_OF_TESTS = 30
+NUMBER_OF_TESTS = 20
 NUMBER_USERS = 20
 NUMBER_OF_QUESTIONS = 100
 
@@ -43,7 +43,7 @@ end
 
 tests = []
 NUMBER_OF_TESTS.times do
-  tests << Test.create!(title: Faker::Educator.subject,
+  tests << Test.create!(title: Faker::Educator.unique.subject,
                level: rand(1..NUBER_OF_LEVELS),
                category: categories.sample,
                author: users.sample)
