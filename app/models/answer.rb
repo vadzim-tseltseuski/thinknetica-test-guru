@@ -3,12 +3,12 @@
 class Answer < ApplicationRecord
   belongs_to :question
 
-  scope :only_correct, -> { where(correct: true) }
-
   validates :body, presence: true
-  validate :answer_limit
+  validate :answer_limit, on: create
+
+  scope :correct, -> { where(correct: true) }
 
   def answer_limit
-    errors.add(:question, 'limit: from 1 to 4 answers') if question.answers.size >= 4
+    errors.add(:question, 'limit: from 1 to 4 answers') if question.answers.count >= 4
   end
 end
