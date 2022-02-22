@@ -44,16 +44,16 @@ end
 tests = []
 NUMBER_OF_TESTS.times do
   tests << Test.create!(title: Faker::Educator.unique.subject,
-               level: rand(1..NUBER_OF_LEVELS),
-               category: categories.sample,
-               author: users.sample)
+                        level: rand(1..NUBER_OF_LEVELS),
+                        category: categories.sample,
+                        author: users.sample)
 end
 puts 'Test created'
 
 questions = []
 NUMBER_OF_QUESTIONS.times do
   questions << Question.create!(body: Faker::Lorem.question(word_count: 4),
-                   test: tests.sample)
+                                test: tests.sample)
 end
 puts 'Question created'
 
