@@ -1,6 +1,6 @@
 class QuestionsController < ApplicationController
-  before_action :find_test, only: %i[index]
-  before_action :find_question, only: %i[show]
+  before_action :find_test, only: %i[index new create]
+  before_action :find_question, only: %i[show destroy]
 
   def index
     render inline: "<ol><% @test.questions.each do |p| %><li><%= p.body %></li><% end %></ol>"
@@ -8,6 +8,22 @@ class QuestionsController < ApplicationController
 
   def show
     render inline: "<%= @question.body %>"
+  end
+
+  def new; end
+
+  def create
+    @question = @test.questions.new(question_params)
+    if @question.save
+        render inline: "<h1>Create question:</h1><p><%= @question.body%></p>"
+    else
+        render :new
+    end
+  end
+
+  def destroy
+    @question.destroy
+    render render inline: "<h1>Question:'<%= @question.body%>' deleted</h1>"
   end
 
   private
@@ -18,6 +34,10 @@ class QuestionsController < ApplicationController
 
   def find_question
     @question = Question.find(params[:id])
+  end
+
+  def question_params
+    params.require(:question).permit(:body)
   end
 
 end
