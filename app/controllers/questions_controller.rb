@@ -17,7 +17,7 @@ class QuestionsController < ApplicationController
   def create
     @question = @test.questions.new(question_params)
     if @question.save
-        render inline: "<h1>Create question:</h1><p><%= @question.body%></p>"
+        redirect_to @question
     else
         render :new
     end
