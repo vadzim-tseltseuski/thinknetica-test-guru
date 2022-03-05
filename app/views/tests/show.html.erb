@@ -3,9 +3,9 @@
 <h2><em>Questions:</em></h2>
 <%= render @questions %>
 
-<div style="margin-top: 100px;">
+<div>
   <%= link_to "<button>Add new question</button>".html_safe, new_test_question_path(@test) %>
 </div>
-<div>
+<div style="margin-top: 50px;">
   <%= link_to "<button>List of tests</button>".html_safe, tests_path %>
 </div>
