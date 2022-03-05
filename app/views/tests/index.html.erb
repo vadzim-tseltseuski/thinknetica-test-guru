@@ -1,12 +1,16 @@
 <table>
-<tr>
-  <th>Title</th>
-  <th>Level</th>
-</tr>
-<% @tests.each do |test| %>
-<tr>
-  <td><%= link_to test.title,  test_path(test)%></td>
-  <td><%= test.level %></td>
-</tr>
-<% end %>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Level</th>
+    </tr>
+  </thead>
+  <tbody>
+  <% @tests.each do |test| %>
+    <tr>
+      <td><%= link_to test.title,  test_path(test)%></td>
+      <td><%= test.level %></td>
+    </tr>
+  <% end %>
+  </tbody>
 </table>
