@@ -8,24 +8,24 @@ class QuestionsController < ApplicationController
     render inline: "<ol><% @test.questions.each do |p| %><li><%= p.body %></li><% end %></ol>"
   end
 
-  def show
-    render inline: "<%= @question.body %>"
-  end
+  def show; end
 
-  def new; end
+  def new
+    @question = @test.questions.new
+  end
 
   def create
     @question = @test.questions.new(question_params)
     if @question.save
-        redirect_to @question
+      redirect_to @question
     else
-        render :new
+      render :new
     end
   end
 
   def destroy
     @question.destroy
-    render render inline: "<h1>Question:'<%= @question.body%>' deleted</h1>"
+    render inline: "<h1>Question:'<%= @question.body%>' deleted</h1>"
   end
 
   private
