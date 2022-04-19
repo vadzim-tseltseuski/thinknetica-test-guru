@@ -13,18 +13,6 @@
   <body>
     <%= yield %>
 
-    <footer style="float:left; margin-top: 100px;">
-        <span>© All rights reserved
-            <div>
-              Vadim Teltevski <%= github_url('vadzim-tseltseuski', 'thinknetica-test-guru') %>
-            <div>
-            <div>
-              This is study project <%= link_to "Thinknetica", "http://thinknetica.com", target:"_blank", rel: "noreferrer noopener" %>
-            </div>
-            <div>
-              <%= current_year %>
-            </div>
-        </span>
-    </footer>
+  <%= render 'shared/footer' %>
   </body>
 </html>
