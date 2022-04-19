@@ -1,0 +1,23 @@
+<h1><%= question_header(@question) %></h1>
+<%= form_with model: [@test, @question], local: true do |form| %>
+  <% if @question.errors.present? %>
+    <div>
+      <h2><%= pluralize(@question.errors.count, 'error') %> detected:</h2>
+
+      <ul>
+        <% @question.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <p>
+    <%= form.label :body, "Enter body:" %>
+    <%= form.text_field :body, id: :question_body %>
+  </p>
+  <p><%= form.submit %></p>
+<% end %>
+<br/>
+<p>
+  <%= link_to "<button>Back</button>".html_safe, test_path(@question.test)%>
+</p>
