@@ -25,7 +25,6 @@ NUMBER_OF_QUESTIONS = 100
 
 Answer.delete_all
 Question.delete_all
-UserTest.delete_all
 Test.delete_all
 User.delete_all
 Category.delete_all
@@ -64,8 +63,3 @@ questions.each do |question|
   Answer.create!(body: Faker::Games::WorldOfWarcraft.hero, correct: true, question: question)
 end
 puts 'Answer created'
-
-100.times do
-  UserTest.create!(user: users.sample, test: tests.sample)
-end
-puts 'UserTest created'
