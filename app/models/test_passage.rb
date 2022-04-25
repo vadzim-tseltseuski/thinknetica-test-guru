@@ -21,7 +21,7 @@ class TestPassage < ApplicationRecord
   end
 
   def result
-    (self.correct_questions / self.test.questions.count) * 100
+    (self.correct_questions * 100.0 / self.test.questions.count)
   end
 
   def success?
@@ -31,7 +31,7 @@ class TestPassage < ApplicationRecord
   private
 
   def correct_answer?(answer_ids)
-    answer_ids && answer_ids.map(&:to_i).sort == correct_answers.ids.sort
+    !!answer_ids && answer_ids.map(&:to_i).sort == correct_answers.ids.sort
   end
 
   def correct_answers
