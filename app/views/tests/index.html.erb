@@ -12,6 +12,7 @@
       <td style="border: 1px solid black;"><%= link_to test.title,  test_path(test)%></td>
       <td style="border: 1px solid black;"><%= test.level %></td>
       <td style="border: 1px solid black;text-align: center;"><%= test.questions.count %></td>
+      <td style="border: 1px solid black;"><%= button_to "Start", start_test_path(test) %></td>
     </tr>
   <% end %>
   </tbody>
