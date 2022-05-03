@@ -1,6 +1,8 @@
 class SessionsController < ApplicationController
   skip_before_action :authenticate_user!
 
+  include FlashHelper
+
   def new; end
 
   def create
@@ -10,7 +12,7 @@ class SessionsController < ApplicationController
       session[:user_id] = user.id
       redirect_to session[:return_to] || root_path
     else
-      flash.now[:alert] = 'Are you a Guru? Verify your email and password, please'
+      add_flash_now_message(:alert, 'Are you a Guru? Verify your email and password, please')
       render :new
     end
   end

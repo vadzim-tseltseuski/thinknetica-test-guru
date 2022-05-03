@@ -1,18 +1,19 @@
-<table style="border: 1px solid black;">
+<table>
   <thead >
     <tr>
-      <th style="border: 1px solid black;">Title</th>
-      <th style="border: 1px solid black;">Level</th>
-      <th style="border: 1px solid black;">Questions count</th>
+      <th>Title</th>
+      <th>Level</th>
+      <th>Questions count</th>
+      <th>Action</th>
     </tr>
   </thead>
   <tbody>
   <% @tests.each do |test| %>
     <tr>
-      <td style="border: 1px solid black;"><%= link_to test.title,  test_path(test)%></td>
-      <td style="border: 1px solid black;"><%= test.level %></td>
-      <td style="border: 1px solid black;text-align: center;"><%= test.questions.count %></td>
-      <td style="border: 1px solid black;"><%= button_to "Start", start_test_path(test) %></td>
+      <td><%= link_to test.title,  test_path(test)%></td>
+      <td><%= test.level %></td>
+      <td><%= test.questions.count %></td>
+      <td><%= button_to "Start", start_test_path(test) %></td>
     </tr>
   <% end %>
   </tbody>
