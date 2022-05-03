@@ -1,0 +1,14 @@
+<nav>
+  <ul>
+    <li><%= link_to 'TestGuru', root_path %></li>
+    <% if logged_in? %>
+      <% logged_user = current_user.email %>
+      <li><%= link_to 'LogOut', logout_path, method: :delete %></li>
+    <% else %>
+      <% logged_user = "NoName" %>
+      <li><%= link_to 'Registration', signup_path %></li>
+      <li><%= link_to 'Login', login_path %></li>
+    <% end %>
+    <li style="float:right" class="active">Welcome, <b><%= logged_user %></b> to TestGuru</li>
+  </ul>
+</nav>
