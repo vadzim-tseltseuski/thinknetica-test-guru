@@ -1,60 +1,62 @@
 # frozen_string_literal: true
 
-class Admin::TestsController < Admin::BaseController
-  before_action :set_test, only: %i[show start destroy edit update]
+module Admin
+  class TestsController < Admin::BaseController
+    before_action :set_test, only: %i[show start destroy edit update]
 
-  def index
-    @tests = Test.all
-  end
-
-  def new
-    @test = Test.new
-  end
-
-  def edit; end
-
-  def show
-    @questions = @test.questions
-  end
-
-  def destroy
-    if @test.destroy
-      redirect_to admin_tests_path
-    else
-      render :show
+    def index
+      @tests = Test.all
     end
-  end
 
-  def update
-    if @test.update(test_params)
-      redirect_to admin_test_path(@test)
-    else
-      render :edit
+    def new
+      @test = Test.new
     end
-  end
 
-  def create
-    @test = current_user.owned_tests.new(test_params)
+    def edit; end
 
-    if @test.save
-      redirect_to admin_test_path(@test)
-    else
-      render :new
+    def show
+      @questions = @test.questions
     end
-  end
 
-  def start
-    current_user.tests.push(@test)
-    redirect_to current_user.test_passage(@test)
-  end
+    def destroy
+      if @test.destroy
+        redirect_to admin_tests_path
+      else
+        render :show
+      end
+    end
 
-  private
+    def update
+      if @test.update(test_params)
+        redirect_to admin_test_path(@test)
+      else
+        render :edit
+      end
+    end
 
-  def test_params
-    params.require(:test).permit(:title, :level, :category_id)
-  end
+    def create
+      @test = current_user.owned_tests.new(test_params)
 
-  def set_test
-    @test = Test.find(params[:id])
+      if @test.save
+        redirect_to admin_test_path(@test)
+      else
+        render :new
+      end
+    end
+
+    def start
+      current_user.tests.push(@test)
+      redirect_to current_user.test_passage(@test)
+    end
+
+    private
+
+    def test_params
+      params.require(:test).permit(:title, :level, :category_id)
+    end
+
+    def set_test
+      @test = Test.find(params[:id])
+    end
   end
 end

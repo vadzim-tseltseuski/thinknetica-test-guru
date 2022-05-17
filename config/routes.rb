@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   root 'tests#index'
 
   devise_for :users, path: :gurus, path_names: { sign_in: :login, sign_out: :logout },
-                            controllers: { sessions: 'users/sessions', registrations: 'users/registrations' }
+                     controllers: { sessions: 'users/sessions', registrations: 'users/registrations' }
 
   resources :tests, only: :index do
     member do
