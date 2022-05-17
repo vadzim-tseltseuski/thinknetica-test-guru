@@ -1,0 +1,16 @@
+<% if @tests.present? %>
+  <table>
+    <tr>
+      <th>Title</th>
+      <th>Level</th>
+      <th>Questions count</th>
+      <th colspan="3">Actions</th>
+    </tr>
+    <%= render @tests %>
+  </table>
+<% else %>
+  <h1>You don't have any tests</h1>
+<% end %>
+<p>
+  <%= link_to 'Add new test', new_admin_test_path %>
+</p>

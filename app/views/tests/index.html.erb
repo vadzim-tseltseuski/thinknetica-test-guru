@@ -10,10 +10,10 @@
   <tbody>
   <% @tests.each do |test| %>
     <tr>
-      <td><%= link_to test.title,  test_path(test)%></td>
+      <td><%= test.title %></td>
       <td><%= test.level %></td>
       <td><%= test.questions.count %></td>
-      <td><%= button_to "Start", start_test_path(test) %></td>
+      <td><%= link_to "Start", start_test_path(test) %></td>
     </tr>
   <% end %>
   </tbody>
