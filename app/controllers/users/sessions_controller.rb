@@ -28,7 +28,6 @@ module Users
     # end
 
     def after_sign_in_path_for(_patient_user)
-      flash[:notice] = 'Welcome! You have signed up successfully.'
       current_user.is_a?(Admin) ? admin_tests_path : tests_path
     end
   end
