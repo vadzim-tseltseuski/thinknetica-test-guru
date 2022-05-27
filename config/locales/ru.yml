@@ -1,0 +1,89 @@
+ru:
+  hello: "Привет мир!"
+
+  helpers:
+    submit:
+      test:
+        create: "Создать тест"
+        update: "Обновить тест"
+      answer:
+        create: "Сохранить ответ"
+        update: "Обновить ответ"
+    label:
+      test:
+        title: "Название"
+        level: "Уровень"
+        category_id: "Категория"
+      answer:
+        body: "Тело"
+        correct: "Верный"
+    select:
+      prompt: "Пожалуйста выберите"
+
+  shared:
+    errors:
+      header:
+        few: "Найдено %{count} ошибки"
+        many: "Найдено %{count} ошибок"
+        one: "Найдена %{count} ошибка"
+        other: "Найдено %{count} ошибки"
+
+  tests:
+    index:
+      title: "Название"
+      level: "Уровень"
+      questions_count: "Количество вопросов"
+      actions: "Действия"
+    test:
+      start: "Начать"
+
+  admin:
+    answers:
+      answer:
+        edit: "Редактировать"
+        show: "Показать"
+        delete: "Удалить"
+        confirm: "Вы уверены?"
+      edit:
+        header: "Редактировать ответ"
+        back: "Назад"
+      new:
+        header: "Новый ответ"
+        back: "Назад"
+      show:
+        header: "Вопрос"
+        answer: "Ответ"
+        сorrect_attr: "Верный"
+        back: "Назад"
+    tests:
+      new:
+        header: "Новый тест"
+      create:
+        success: "Тест успешно создан."
+      index:
+        header: "Доступные тесты"
+        title: "Название"
+        level: "Уровень"
+        questions_count: "Количество вопросов"
+        actions: "Действия"
+        no_tests: "У вас нет созданных тестов"
+        add_new: "Добавить новый тест"
+      show:
+        header: "Тест %{title}"
+        questions: "Вопросы"
+        add_new_question: "Добавить новый вопрос"
+        edit: "Редактировать"
+        tests_list: "К списку всех тестов"
+      edit:
+        header: "Редактировать тест"
+      form:
+        back_to_tests: "К списку всех тестов"
+      test:
+        edit: "Редактировать"
+        show: "Показать"
+        delete: "Удалить"
+        confirm: "Вы уверены?"
+
+  tests_mailer:
+    completed_test:
+      subject: "Вы успешно завершили тест!"

@@ -1,16 +1,16 @@
-<h1>Test <%= @test.title %></h1>
+<h1><%= t('.header', title: @test.title) %></h1>
 
-<h2><em>Questions:</em></h2>
+<h2><em><%= t('.questions') %></em></h2>
 
 <%= render @questions %>
 <br>
 
 <div>
-  <%= link_to "Add new question", new_admin_test_question_path(@test) %>
+  <%= link_to t('.add_new_question'), new_admin_test_question_path(@test) %>
 </div>
 <div>
-  <%= link_to "Edit test", edit_admin_test_path(@test) %>
+  <%= link_to t('.edit'), edit_admin_test_path(@test) %>
 </div>
 <div>
-  <%= link_to "List of tests", admin_tests_path %>
+  <%= link_to t('.tests_list'), admin_tests_path %>
 </div>

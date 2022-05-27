@@ -31,3 +31,89 @@
 
 en:
   hello: "Hello world"
+
+  helpers:
+    submit:
+      test:
+        create: "Create test"
+        update: "Update test"
+      answer:
+        create: "Create answer"
+        update: "Update answer"
+    label:
+      test:
+        title: "Title"
+        level: "Level"
+        category_id: "Category"
+      answer:
+        body: "Body"
+        correct: "Correct"
+    select:
+      prompt: "Please select"
+
+  shared:
+    errors:
+      header:
+        one: "%{count} error detected"
+        other: "%{count} errors detected"
+
+  tests:
+    index:
+      title: "Title"
+      level: "Level"
+      questions_count: "Questions count"
+      actions: "Actions"
+      no_tests: "You don't have any tests"
+    test:
+      start: "Start"
+
+  admin:
+    answers:
+      answer:
+        edit: "Edit"
+        show: "Show"
+        delete: "Delete"
+        confirm: "Are you sure?"
+      edit:
+        header: "Editing Answer"
+        back: "Back"
+      new:
+        header: "New question"
+        back: "Back"
+      show:
+        header: "Question"
+        answer: "Answer"
+        сorrect_attr: "Correct"
+        back: "Back"
+    tests:
+      new:
+        header: "New test"
+      create:
+        success: "Test was successfully created."
+      index:
+        header: "Tricky Tests"
+        title: "Title"
+        level: "Level"
+        questions_count: "Questions count"
+        actions: "Actions"
+        no_tests: "You don't have any tests"
+        add_new: "Add new test"
+      show:
+        header: "Test %{title}"
+        questions: "Questions"
+        add_new_question: "Add new question"
+        edit: "Edit"
+        tests_list: "Back to list of tests"
+      edit:
+        header: "Edit test"
+      form:
+        back_to_tests: "Back to list of tests"
+      test:
+        edit: "Edit"
+        show: "Show"
+        delete: "Delete"
+        confirm: "Are you sure?"
+
+  tests_mailer:
+    completed_test:
+      subject: "You just completed the test!"
