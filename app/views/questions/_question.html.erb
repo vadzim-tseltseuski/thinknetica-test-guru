@@ -1,9 +1,0 @@
-<li>
-  <%= question.body %>
-  <%= link_to "<button>Show</button>".html_safe, question_path(question) %>
-  <%= link_to "<button>Edit</button>".html_safe, edit_question_path(question) %>
-  <%= link_to "<button>Delete</button>".html_safe,
-              question_path(question),
-              method: :delete,
-              data: { confirm: 'Delete question?' } %>
-</li>
