@@ -1,0 +1,16 @@
+en:
+  activerecord:
+    models:
+      test: "Test"
+      answer: "Answer"
+
+    attributes:
+      test:
+        title: "Title"
+      answer:
+        body: "Body"
+        correct: "Correct"
+
+    errors:
+      messages:
+        blank: "can't be blank"
