@@ -14,10 +14,13 @@
 
   <body>
     <%= render 'shared/nav' %>
-    <%= show_flashes %>
+    <div class='container'>
 
-    <%= yield %>
+      <%= show_flashes %>
 
-    <%= render 'shared/footer' %>
+      <%= yield %>
+
+      <%= render 'shared/footer' %>
+  </div>
   </body>
 </html>

@@ -9,6 +9,15 @@ module FlashHelper
     flash[key] = msg
   end
 
+  def flash_class(level)
+    alert_class = { notice: 'alert-info',
+                    success: 'alert-success',
+                    error: 'alert-danger',
+                    alert: 'alert-danger' }
+
+    alert_class[level.to_sym] || 'alert-error'
+  end
+
   def show_flashes
     render 'shared/flash'
   end
