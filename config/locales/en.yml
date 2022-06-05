@@ -67,6 +67,11 @@ en:
     test:
       start: "Start"
 
+  test_passages:
+    gist:
+      success: "Gist was successfully created. URL: %{url}"
+      failure: "An error occurred while saving gist"
+
   admin:
     answers:
       answer:
@@ -113,6 +118,13 @@ en:
         show: "Show"
         delete: "Delete"
         confirm: "Are you sure?"
+    gists:
+      index:
+        header: "Gists"
+        question: "Questions"
+        url: "URL"
+        author: "Author"
+        no_gists: "You don't have any gists"
 
   tests_mailer:
     completed_test:

@@ -37,6 +37,12 @@ ru:
     test:
       start: "Начать"
 
+  test_passages:
+    gist:
+      success: "Gist успешно сохранен. URL - %{url}"
+      failure: "При сохранении произошла ошибка"
+
+
   admin:
     answers:
       answer:
@@ -83,6 +89,13 @@ ru:
         show: "Показать"
         delete: "Удалить"
         confirm: "Вы уверены?"
+    gists:
+      index:
+        header: "Gists"
+        question: "Вопрос"
+        url: "URL"
+        author: "Автор"
+        no_gists: "У вас нет созданных gists"
 
   tests_mailer:
     completed_test:
