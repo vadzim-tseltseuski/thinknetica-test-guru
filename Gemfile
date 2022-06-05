@@ -31,6 +31,15 @@ gem 'rails-i18n', '~> 6.0.0'
 # Auth
 gem 'devise', '~> 4.0'
 
+# HTTP client
+gem 'faraday'
+
+# GitHub client
+gem 'octokit', '~> 4.0'
+
+# env
+gem 'dotenv-rails', groups: [:development, :test]
+
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
