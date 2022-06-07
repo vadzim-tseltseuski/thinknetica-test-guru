@@ -25,7 +25,7 @@ class TestPassagesController < ApplicationController
 
     if result.success?
       url = result.url
-      current_user.gists.create(question: question, url: url)
+      Gist.create(url: url, user: current_user, question: question)
       flash_options = { notice: t('.success', url: url) }
     else
       flash_options ={ alert: t('.failure') }
