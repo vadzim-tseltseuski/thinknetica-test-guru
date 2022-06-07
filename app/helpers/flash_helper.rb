@@ -23,6 +23,6 @@ module FlashHelper
   end
 
   def flash_message(key)
-    content_tag :div, flash[key], class: "alert #{flash_class(key)} text-center", role: 'alert' if flash[key]
+    content_tag :div, flash[key].html_safe, class: "alert #{flash_class(key)} text-center", role: 'alert' if flash[key]
   end
 end

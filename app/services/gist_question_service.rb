@@ -1,5 +1,4 @@
 class GistQuestionService
-  GIST_TOKEN = ENV.fetch('GIST_TOKEN')
 
   Response = Struct.new(:url) do
     def success?
@@ -36,7 +35,6 @@ class GistQuestionService
   end
 
   def default_client
-    Octokit::Client.new(access_token: GIST_TOKEN)
+    Octokit::Client.new(access_token: ENV.fetch('GIST_TOKEN'))
   end
-
 end

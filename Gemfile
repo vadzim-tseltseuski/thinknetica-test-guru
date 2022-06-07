@@ -31,14 +31,8 @@ gem 'rails-i18n', '~> 6.0.0'
 # Auth
 gem 'devise', '~> 4.0'
 
-# HTTP client
-gem 'faraday'
-
 # GitHub client
 gem 'octokit', '~> 4.0'
-
-# env
-gem 'dotenv-rails', groups: [:development, :test]
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
@@ -49,6 +43,8 @@ gem 'bootsnap', '>= 1.4.4', require: false
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
+  # env
+  gem 'dotenv-rails'
 end
 
 group :development do
