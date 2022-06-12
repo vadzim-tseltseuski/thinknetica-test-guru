@@ -1,4 +1,6 @@
+# frozen_string_literal: true
+
 class Gist < ApplicationRecord
-    belongs_to :user
-    belongs_to :question
-  end
+  belongs_to :user
+  belongs_to :question
+end

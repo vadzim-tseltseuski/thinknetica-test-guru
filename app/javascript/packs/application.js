@@ -13,6 +13,9 @@ Turbolinks.start()
 ActiveStorage.start()
 
 require("@popperjs/core")
+require('util/sorting')
+require('util/password_confirm_validate')
+
 
 import "bootstrap"
 

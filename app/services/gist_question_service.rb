@@ -1,5 +1,6 @@
-class GistQuestionService
+# frozen_string_literal: true
 
+class GistQuestionService
   Response = Struct.new(:url) do
     def success?
       !!url
