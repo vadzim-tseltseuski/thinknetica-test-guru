@@ -21,6 +21,7 @@ import "bootstrap"
 
 // Import the specific modules you may need (Modal, Alert, etc)
 import { Tooltip, Popover } from "bootstrap"
+import Sorting from 'util/sorting'
 
 // The stylesheet location we created earlier
 require("../../assets/stylesheets/application.scss")
@@ -37,4 +38,10 @@ document.addEventListener("turbolinks:load", () => {
     var popoverList = popoverTriggerList.map(function(popoverTriggerEl) {
         return new Popover(popoverTriggerEl)
     })
+
+    const table = document.querySelector('table')
+    new Sorting(table, '.sort-by-title').addListener()
 })
+
+
+

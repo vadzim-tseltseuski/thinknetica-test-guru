@@ -1,21 +1,28 @@
 document.addEventListener('turbolinks:load', function() {
-    passwordConfirmation = document.getElementById('user_password_confirmation')
+  const passwordInput = document.getElementById('user_password')
+  const passwordConfirmationInput = document.getElementById('user_password_confirmation')
 
-    if (passwordConfirmation) { passwordConfirmation.addEventListener("input", passwordMatches) }
+  if (passwordInput && passwordConfirmationInput) {
+      passwordInput.addEventListener('input', passwordMatches)
+      passwordConfirmationInput.addEventListener('input', passwordMatches)
+  }
   })
 
   function passwordMatches(){
-    var password = user_password.value
-    var passwordConfirmation = user_password_confirmation.value
+    const passwordConfirmationInput = document.getElementById('user_password_confirmation')
+    const passwordInput = document.getElementById('user_password')
+    const password = passwordInput.value
+    const passwordConfirmation = passwordConfirmationInput.value
+
 
     if (passwordConfirmation === '') {
-     this.classList.remove("error", "success");
+      passwordConfirmationInput.classList.remove("error", "success");
     return
     }
     if (password === passwordConfirmation){
-      this.className ='success'
+      passwordConfirmationInput.className ='success'
 
     } else {
-      this.className ='error'
+      passwordConfirmationInput.className ='error'
     }
   }
