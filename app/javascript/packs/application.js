@@ -22,6 +22,7 @@ import "bootstrap"
 // Import the specific modules you may need (Modal, Alert, etc)
 import { Tooltip, Popover } from "bootstrap"
 import Sorting from 'util/sorting'
+import PaswordConfirmValidate from 'util/password_confirm_validate'
 
 // The stylesheet location we created earlier
 require("../../assets/stylesheets/application.scss")
@@ -40,8 +41,14 @@ document.addEventListener("turbolinks:load", () => {
     })
 
     const table = document.querySelector('table')
-    new Sorting(table, '.sort-by-title').addListener()
+    if (table) { new Sorting(table, '.sort-by-title').addListener() }
+
+    const form = document.getElementById('new_user')
+    let passwordConfirmationInput = null
+    let passwordInput = null
+    if (form) {
+      passwordConfirmationInput = form.querySelector('#user_password_confirmation')
+      passwordInput = form.querySelector('#user_password')
+    }
+    if (passwordInput && passwordConfirmationInput) { new PaswordConfirmValidate(form).addListener() }
 })
-
-
-

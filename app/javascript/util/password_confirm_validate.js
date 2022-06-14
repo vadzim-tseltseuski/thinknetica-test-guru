@@ -1,16 +1,16 @@
-document.addEventListener('turbolinks:load', function() {
-  const passwordInput = document.getElementById('user_password')
-  const passwordConfirmationInput = document.getElementById('user_password_confirmation')
+export default class PaswordConfirmValidate{
 
-  if (passwordInput && passwordConfirmationInput) {
-      passwordInput.addEventListener('input', passwordMatches)
-      passwordConfirmationInput.addEventListener('input', passwordMatches)
+  constructor(form) {
+    this.form = form
   }
-  })
 
-  function passwordMatches(){
-    const passwordConfirmationInput = document.getElementById('user_password_confirmation')
-    const passwordInput = document.getElementById('user_password')
+  addListener(){
+    if (this.form) { this.form.addEventListener('input', event=> {this.passwordMatches()}) }
+  }
+
+  passwordMatches(){
+    const passwordConfirmationInput = this.form.querySelector('#user_password_confirmation')
+    const passwordInput = this.form.querySelector('#user_password')
     const password = passwordInput.value
     const passwordConfirmation = passwordConfirmationInput.value
 
@@ -26,3 +26,4 @@ document.addEventListener('turbolinks:load', function() {
       passwordConfirmationInput.className ='error'
     }
   }
+}
