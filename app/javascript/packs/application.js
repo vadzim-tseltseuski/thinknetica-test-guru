@@ -15,6 +15,9 @@ ActiveStorage.start()
 require("@popperjs/core")
 require('util/sorting')
 require('util/password_confirm_validate')
+require('util/form_inline')
+require('jquery')
+require("util/progress_bar")
 
 
 import "bootstrap"

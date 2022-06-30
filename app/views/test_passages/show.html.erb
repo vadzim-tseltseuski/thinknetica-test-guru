@@ -1,5 +1,12 @@
 <h1>Passing the <%= @test_passage.test.title %> test</h1>
 
+<div class="progress">
+  <%= tag.div class: 'progress-bar progress-bar-striped progress-bar-animated',
+              role: 'progressbar',
+              data: { current_number: @test_passage.current_question_number,
+                      total: @test_passage.test.questions.count } %>
+</div>
+
 <b>
   <%= @test_passage.current_question.body %>
 </b>

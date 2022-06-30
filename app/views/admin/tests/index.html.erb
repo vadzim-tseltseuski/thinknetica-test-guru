@@ -1,4 +1,5 @@
 <% if @tests.present? %>
+  <%= render 'shared/errors', resource: @test %>
   <table class="table table-hover">
     <tr>
       <th scope="col" style="text-align: center"><%= t('.title') %></th>
