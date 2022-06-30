@@ -28,6 +28,10 @@ class TestPassage < ApplicationRecord
     result >= SUCCESS_RATE
   end
 
+  def current_question_number
+    test.questions.order(:id).where('id <= ?', current_question.id).count
+  end
+
   private
 
   def correct_answer?(answer_ids)
