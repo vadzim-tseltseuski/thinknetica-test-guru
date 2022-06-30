@@ -34,6 +34,9 @@ gem 'devise', '~> 4.0'
 # GitHub client
 gem 'octokit', '~> 4.0'
 
+# Icon
+gem 'octicons_helper'
+
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
