@@ -37,7 +37,7 @@ puts 'Catergory created'
 
 users = []
 NUMBER_USERS.times do |index|
-  users << User.create!(type: User, first_name: Faker::FunnyName.two_word_name, last_name: 'T', email: "vadtel#{|index|}@testguru.com", password: '123456')
+  users << User.create!(type: User, first_name: Faker::FunnyName.two_word_name, last_name: 'T', email: "vadtel#{index}@testguru.com", password: '123456')
 end
 
 admin = User.create!(type: Admin, first_name: 'VadimAdmin', last_name: 'T', email: ENV['ADMIN_EMAIL'], password: ENV['ADMIN_PASSWORD'])
