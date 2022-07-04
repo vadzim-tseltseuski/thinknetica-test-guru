@@ -36,16 +36,18 @@ end
 puts 'Catergory created'
 
 users = []
-NUMBER_USERS.times do
-  users << User.create!(name: Faker::FunnyName.two_word_name)
+NUMBER_USERS.times do |index|
+  users << User.create!(type: User, first_name: Faker::FunnyName.two_word_name, last_name: 'T', email: "vadtel#{|index|}@testguru.com", password: '123456')
 end
+
+admin = User.create!(type: Admin, first_name: 'VadimAdmin', last_name: 'T', email: ENV['ADMIN_EMAIL'], password: ENV['ADMIN_PASSWORD'])
 
 tests = []
 NUMBER_OF_TESTS.times do
   tests << Test.create!(title: Faker::Educator.unique.subject,
                         level: rand(1..NUBER_OF_LEVELS),
                         category: categories.sample,
-                        author: users.sample)
+                        author: admin)
 end
 puts 'Test created'
 
@@ -64,11 +66,4 @@ questions.each do |question|
 end
 puts 'Answer created'
 
-users = User.create!(
-  [
-    { type: User, first_name: 'Vadim', last_name: 'T', email: 'vadtel@testguru.com', password: '123456' },
-    { type: User, first_name: 'Vadim', last_name: 'T', email: 'vadtel2@testguru.com', password: '123456' },
-    { type: Admin, first_name: 'VadimAdmin', last_name: 'T', email: ENV['ADMIN_EMAIL'], password: ENV['ADMIN_PASSWORD'] }
-  ]
-)
 users.each(&:confirm)
