@@ -5,7 +5,7 @@ class FeedbacksController < ApplicationController
 
   def create
     result = FeedbacksMailer.feedback(feedback_params[:feedback], current_user).deliver_now
-    redirect_to root_path, success: 'Feedback sent'
+    redirect_to feedback_path, success: 'Feedback sent'
   end
 
   private
