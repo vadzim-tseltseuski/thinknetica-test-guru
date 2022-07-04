@@ -63,3 +63,12 @@ questions.each do |question|
   Answer.create!(body: Faker::Games::WorldOfWarcraft.hero, correct: true, question: question)
 end
 puts 'Answer created'
+
+users = User.create!(
+  [
+    { type: User, first_name: 'Vadim', last_name: 'T', email: 'vadtel@testguru.com', password: '123456' },
+    { type: User, first_name: 'Vadim', last_name: 'T', email: 'vadtel2@testguru.com', password: '123456' },
+    { type: Admin, first_name: 'VadimAdmin', last_name: 'T', email: ENV['ADMIN_EMAIL'], password: ENV['ADMIN_PASSWORD'] }
+  ]
+)
+users.each(&:confirm)
