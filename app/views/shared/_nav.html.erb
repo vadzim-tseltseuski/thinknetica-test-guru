@@ -7,6 +7,7 @@
         <% end %>
         Welcome, <b><%= current_user.email %></b> to TestGuru
         <%= link_to 'LogOut', destroy_user_session_path, method: :delete %>
+        <%= link_to 'Send Feedback', feedback_path%>
     </span>
       <% else %>
       <span class='navbar-text'>

@@ -1,0 +1,16 @@
+class FeedbacksController < ApplicationController
+  before_action :authenticate_user!
+
+  def show; end
+
+  def create
+    result = FeedbacksMailer.feedback(feedback_params[:feedback], current_user).deliver_now
+    redirect_to root_path, success: 'Feedback sent'
+  end
+
+  private
+
+  def feedback_params
+    params.permit(:feedback)
+  end
+end
