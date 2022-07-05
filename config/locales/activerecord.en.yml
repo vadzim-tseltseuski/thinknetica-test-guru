@@ -3,6 +3,7 @@ en:
     models:
       test: "Test"
       answer: "Answer"
+      category: "Category"
 
     attributes:
       test:

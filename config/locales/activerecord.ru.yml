@@ -4,6 +4,7 @@ ru:
       test: "Тест"
       answer: "Ответ"
       question: "Вопрос"
+      category: "Категория"
 
     attributes:
       test:
