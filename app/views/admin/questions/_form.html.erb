@@ -2,12 +2,12 @@
 <%= form_with model: [:admin, @test, @question], local: true do |form| %>
   <%= render "shared/errors", resource: @question %>
   <p>
-    <%= form.label :body, "Enter body:" %>
+    <%= form.label :body, t('.enter_body') %>
     <%= form.text_field :body, id: :question_body %>
   </p>
   <p><%= form.submit %></p>
 <% end %>
 <br/>
 <p>
-  <%= link_to "Back", admin_test_path(@question.test)%>
+  <%= link_to t('.back'), admin_test_path(@question.test)%>
 </p>

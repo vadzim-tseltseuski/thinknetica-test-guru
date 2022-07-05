@@ -27,6 +27,17 @@ ru:
         many: "Найдено %{count} ошибок"
         one: "Найдена %{count} ошибка"
         other: "Найдено %{count} ошибки"
+    admin:
+      nav:
+        admin_panel: TestGuru панель администратора
+        logout: Выйти
+    nav:
+      logout: Выйти
+      send_feedback: Оставить отзыв
+      registration: Зарегистрироваться
+      login: Войти
+      admin_panel: Панель администратора
+      welcome: Добро пожаловать на TestGuru, %{name}
 
   tests:
     index:
@@ -37,6 +48,25 @@ ru:
     test:
       start: "Начать"
 
+  test_passages:
+    show:
+      header: Прохождение теста %{title}
+      next: Следующий
+      gist: Сохранить в Gist этот вопрос
+    result:
+      header: "Тест: %{title} пройден"
+      message: Правильных ответов %{correct_questions} из %{count}
+      failed: Вы не прошли тест.
+      passed: Вы прошли тест.
+      tests_link: "К списку тестов"
+
+  feedbacks:
+    show:
+      header: Отзыв
+      header_message: Ваш отзыв поможет стать нам лучше
+      send: Отправить отзыв
+      message: Сообщение
+
   gists:
     create:
       gist_created: "Gist успешно сохранен. %{url}"
@@ -44,6 +74,17 @@ ru:
 
 
   admin:
+    questions:
+      question:
+        edit: "Редактировать"
+        show: "Показать"
+        delete: "Удалить"
+        confirm: "Вы уверены?"
+      form:
+        edit_header: Редактировать %{title} вопрос
+        new_header: Создать %{title} вопрос
+        enter_body: Введите тело вопроса
+        back: Назад к тесту
     answers:
       answer:
         edit: "Редактировать"

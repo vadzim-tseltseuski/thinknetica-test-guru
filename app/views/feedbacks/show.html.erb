@@ -1,16 +1,14 @@
 <div class="container d-flex justify-content-center">
   <div class="card mt-5 pb-5">
-    <div class="d-flex flex-row justify-content-between p-3 adiv text-white">
-      <span class="pb-3">feedback</span>
-    </div>
+    <div class="card-header"><%= t('.header') %></div>
     <div class="mt-2 p-4 text-center">
-      <h6 class="mb-0">Your feedback help us to improve.</h6>
+      <h6 class="mb-0"><%= t('.header_message')%></h6>
       <%= form_with url: feedback_path, local: true, method: :post do |f| %>
         <div class="form-group mt-4">
-          <%= f.text_area :feedback, rows: 10, autofocus: true, class: 'form-control', placeholder: 'Message' %>
+          <%= f.text_area :feedback, rows: 10, autofocus: true, class: 'form-control', placeholder: t('.message') %>
         </div>
         <div class="mt-2">
-          <%= f.submit 'Send feedback', class: "btn btn-primary" %>
+          <%= f.submit t('.send'), class: "btn btn-primary" %>
         </div>
       <% end %>
     </div>

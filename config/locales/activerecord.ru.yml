@@ -3,6 +3,7 @@ ru:
     models:
       test: "Тест"
       answer: "Ответ"
+      question: "Вопрос"
 
     attributes:
       test:
@@ -10,6 +11,7 @@ ru:
       answer:
         body: "Тело"
         correct: "Верный"
+
 
     errors:
       messages:
