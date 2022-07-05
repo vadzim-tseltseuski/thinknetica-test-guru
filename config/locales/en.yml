@@ -60,6 +60,7 @@ en:
       nav:
         admin_panel: TestGuru admin panel
         logout: Logout
+        welcome: Welcome, %{name} to TestGuru
     nav:
       logout: Logout
       send_feedback: Send Feedback
@@ -75,7 +76,6 @@ en:
       questions_count: "Questions count"
       actions: "Actions"
       no_tests: "You don't have any tests"
-    test:
       start: "Start"
 
   test_passages:

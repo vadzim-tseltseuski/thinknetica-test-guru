@@ -31,6 +31,7 @@ ru:
       nav:
         admin_panel: TestGuru панель администратора
         logout: Выйти
+        welcome: Добро пожаловать на TestGuru, %{name}
     nav:
       logout: Выйти
       send_feedback: Оставить отзыв
@@ -45,7 +46,6 @@ ru:
       level: "Уровень"
       questions_count: "Количество вопросов"
       actions: "Действия"
-    test:
       start: "Начать"
 
   test_passages:
