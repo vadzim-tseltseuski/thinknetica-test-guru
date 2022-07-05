@@ -77,7 +77,7 @@ ru:
     questions:
       show:
         answers_header: Ответы
-        new_answers: Новый ответ
+        new_answer: Новый ответ
         edit_question: Редактировать вопрос
         back: Назад
       question:
