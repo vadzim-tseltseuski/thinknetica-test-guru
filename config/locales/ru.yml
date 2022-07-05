@@ -75,6 +75,11 @@ ru:
 
   admin:
     questions:
+      show:
+        answers_header: Ответы
+        new_answers: Новый ответ
+        edit_question: Редактировать вопрос
+        back: Назад
       question:
         edit: "Редактировать"
         show: "Показать"

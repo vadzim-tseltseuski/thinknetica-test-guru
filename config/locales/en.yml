@@ -104,6 +104,11 @@ en:
 
   admin:
     questions:
+      show:
+        answers_header: Answers
+        new_answer: New answers
+        edit_question: Edit question
+        back: Back
       question:
         edit: "Edit"
         show: "Show"
