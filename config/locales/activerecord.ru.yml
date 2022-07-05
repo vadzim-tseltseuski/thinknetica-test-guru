@@ -9,6 +9,7 @@ ru:
     attributes:
       test:
         title: "Название"
+        category: "Категория"
       answer:
         body: "Тело"
         correct: "Верный"

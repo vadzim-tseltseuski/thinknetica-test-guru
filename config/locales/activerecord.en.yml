@@ -8,6 +8,7 @@ en:
     attributes:
       test:
         title: "Title"
+        category: "Category"
       answer:
         body: "Body"
         correct: "Correct"
