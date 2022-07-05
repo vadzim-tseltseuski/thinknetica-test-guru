@@ -18,6 +18,7 @@ ru:
         first_name: Имя
         last_name: Фамилия
         password: Пароль
+        password_confirmation: Подтверждение пароля
 
     errors:
       messages:
