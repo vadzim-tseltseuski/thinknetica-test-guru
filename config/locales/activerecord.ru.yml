@@ -5,6 +5,7 @@ ru:
       answer: "Ответ"
       question: "Вопрос"
       category: "Категория"
+      user: "Пользователь"
 
     attributes:
       test:
@@ -13,7 +14,10 @@ ru:
       answer:
         body: "Тело"
         correct: "Верный"
-
+      user:
+        first_name: Имя
+        last_name: Фамилия
+        password: Пароль
 
     errors:
       messages:

@@ -4,6 +4,7 @@ en:
       test: "Test"
       answer: "Answer"
       category: "Category"
+      user: "User"
 
     attributes:
       test:
