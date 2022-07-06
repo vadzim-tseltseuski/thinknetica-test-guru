@@ -87,6 +87,7 @@ ru:
         title: Название
         badge: Ачивка
         type: Правило
+        option: Опция
         action: Действие
       new:
         header: Создать новую ачивку
@@ -101,7 +102,7 @@ ru:
         success: Ачивка успешно создана
       update:
         success: Ачивка успешно сохранена
-      delete:
+      destroy:
         success: Ачивка успешно удалена
     questions:
       show:

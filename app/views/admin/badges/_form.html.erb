@@ -15,11 +15,14 @@
         </p>
 
         <p class="form-field is-required">
-          <%= form.label :badge_rule_id %>
-
-          <%= form.collection_select :badge_rule_id, BadgeRule.all, :id, :rule_type, prompt: true %>
+          <%= form.label :rule %>
+          <%= form.collection_select :rule, Badge::RULE, :to_s, :to_s, prompt: true %>
         </p><br>
 
+        <p class="form-field">
+          <%= form.label :rule_option %>
+          <%= form.text_field :rule_option%>
+        </p>
 
         <p><%= form.submit class: "btn btn-primary mt-3" %></p>
       </div>

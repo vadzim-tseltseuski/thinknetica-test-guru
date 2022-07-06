@@ -125,7 +125,7 @@ en:
         success: Badge was successfilly created.
       update:
         success: Badge was successfilly updated.
-      delete:
+      destroy:
         success: Badge was successfilly deleted.
     questions:
       show:
