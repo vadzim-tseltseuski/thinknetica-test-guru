@@ -1,11 +1,11 @@
-<h1>Test: <%= @test_passage.test.title %> was completed</h1>
+<h1><%= t('.header', title: @test_passage.test.title) %></h1>
 <h2 style="color:<%= @test_passage.success? ? 'green' : 'red' %>">
-  You <%= @test_passage.success? ? 'passed' : 'failed' %> the test.
+  <%= @test_passage.success? ? t('.passed') : t('.failed') %>
 </h2>
 <p>
- Correct answer <%= @test_passage.correct_questions %> from  <%= @test_passage.test.questions.count %>
+  <%= t('.message', correct_questions: @test_passage.correct_questions, count: @test_passage.test.questions.count) %>
 </p>
 
 <p>
-  <%= link_to 'Back to tests', tests_path %>
+  <%= link_to t('.tests_link'), tests_path %>
 </p>

@@ -3,13 +3,22 @@ ru:
     models:
       test: "Тест"
       answer: "Ответ"
+      question: "Вопрос"
+      category: "Категория"
+      user: "Пользователь"
 
     attributes:
       test:
         title: "Название"
+        category: "Категория"
       answer:
         body: "Тело"
         correct: "Верный"
+      user:
+        first_name: Имя
+        last_name: Фамилия
+        password: Пароль
+        password_confirmation: Подтверждение пароля
 
     errors:
       messages:

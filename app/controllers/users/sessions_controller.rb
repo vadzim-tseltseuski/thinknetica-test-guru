@@ -12,7 +12,7 @@ module Users
     # POST /resource/sign_in
     def create
       super
-      flash[:notice] = "Привет, #{current_user.first_name} #{current_user.last_name}"
+      flash[:notice] = t('devise.sessions.welcome_message', name: "#{current_user.first_name} #{current_user.last_name}")
     end
 
     # DELETE /resource/sign_out

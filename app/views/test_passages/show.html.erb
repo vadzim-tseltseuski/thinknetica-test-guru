@@ -1,4 +1,4 @@
-<h1>Passing the <%= @test_passage.test.title %> test</h1>
+<h1><%= t('.header', title: @test_passage.test.title) %></h1>
 
 <div class="progress">
   <%= tag.div class: 'progress-bar progress-bar-striped progress-bar-animated',
@@ -18,7 +18,7 @@
       <%= b.label %>
     </div>
   <% end %>
-  <p><%= link_to 'Gist this question', gists_path(test_passage_id: @test_passage.id), method: :post %></p>
+  <p><%= link_to t('.gist'), gists_path(test_passage_id: @test_passage.id), method: :post %></p>
 
-  <p><%= form.submit 'Next' %></p>
+  <p><%= form.submit t('.next') %></p>
 <% end %>

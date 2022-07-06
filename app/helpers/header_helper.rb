@@ -2,6 +2,6 @@
 
 module HeaderHelper
   def question_header(question)
-    "#{question.new_record? ? 'Create New' : 'Edit'} #{question.test.title} Question"
+    question.new_record? ? t('.edit_header', title: question.test.title) : t('.new_header', title: question.test.title)
   end
 end

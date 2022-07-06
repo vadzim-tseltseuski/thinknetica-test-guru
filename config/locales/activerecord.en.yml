@@ -3,10 +3,13 @@ en:
     models:
       test: "Test"
       answer: "Answer"
+      category: "Category"
+      user: "User"
 
     attributes:
       test:
         title: "Title"
+        category: "Category"
       answer:
         body: "Body"
         correct: "Correct"

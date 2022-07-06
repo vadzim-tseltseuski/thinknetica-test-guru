@@ -20,6 +20,8 @@ Rails.application.routes.draw do
 
   resources :gists, only: :create
 
+  resource :feedback, only: %i[show create]
+
   namespace :admin do
     resources :tests do
       patch :update_inline, on: :member
