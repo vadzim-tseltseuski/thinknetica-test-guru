@@ -111,6 +111,8 @@ en:
 
   admin:
     badges:
+      badge:
+        delete_confirmation: Are you sure?
       index:
         header: Achivements
         title: Title
@@ -119,6 +121,12 @@ en:
         action: Action
       new:
         header: Create new badge
+      create:
+        success: Badge was successfilly created.
+      update:
+        success: Badge was successfilly updated.
+      delete:
+        success: Badge was successfilly deleted.
     questions:
       show:
         answers_header: Answers

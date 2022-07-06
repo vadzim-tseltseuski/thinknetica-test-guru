@@ -93,9 +93,16 @@ ru:
       show:
         back: Назад
       badge:
+        delete_confirmation: Точно удалить?
         show: Показать
         edit: Редактировать
         delete: Удалить
+      create:
+        success: Ачивка успешно создана
+      update:
+        success: Ачивка успешно сохранена
+      delete:
+        success: Ачивка успешно удалена
     questions:
       show:
         answers_header: Ответы
