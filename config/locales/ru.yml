@@ -32,6 +32,7 @@ ru:
         admin_panel: TestGuru панель администратора
         logout: Выйти
         welcome: Добро пожаловать на TestGuru, %{name}
+        badge: Ачивки
     nav:
       logout: Выйти
       send_feedback: Оставить отзыв
@@ -39,6 +40,7 @@ ru:
       login: Войти
       admin_panel: Панель администратора
       welcome: Добро пожаловать на TestGuru, %{name}
+      badge: Мои ачивки
 
   tests:
     index:
@@ -72,8 +74,28 @@ ru:
       gist_created: "Gist успешно сохранен. %{url}"
       gist_not_created: "При сохранении произошла ошибка"
 
+  badges:
+    user_badges:
+      header: Награды
+      title: Название
+      badge: Ачивка
 
   admin:
+    badges:
+      index:
+        header: Награды
+        title: Название
+        badge: Ачивка
+        type: Правило
+        action: Действие
+      new:
+        header: Создать новую ачивку
+      show:
+        back: Назад
+      badge:
+        show: Показать
+        edit: Редактировать
+        delete: Удалить
     questions:
       show:
         answers_header: Ответы

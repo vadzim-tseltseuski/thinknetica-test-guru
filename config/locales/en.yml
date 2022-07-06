@@ -68,6 +68,7 @@ en:
       login: Login
       admin_panel: Admin Panel
       welcome: Welcome, %{name} to TestGuru
+      badge: My achivments
 
   tests:
     index:
@@ -102,7 +103,22 @@ en:
       gist_created: "Gist was successfully created. %{url}"
       gist_not_created: "An error occurred while saving gist"
 
+  badges:
+    user_badges:
+      header: Achivements
+      title: Title
+      badge: Badge
+
   admin:
+    badges:
+      index:
+        header: Achivements
+        title: Title
+        badge: Badge
+        type: Rule type
+        action: Action
+      new:
+        header: Create new badge
     questions:
       show:
         answers_header: Answers

@@ -8,6 +8,7 @@
         <%= t('.welcome', name: current_user.email) %>
         <%= link_to t('.logout'), destroy_user_session_path, method: :delete %>
         <%= link_to t('.send_feedback'), feedback_path%>
+        <%= link_to t('.badge'), user_badges_path%>
     </span>
       <% else %>
       <span class='navbar-text'>

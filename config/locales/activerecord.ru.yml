@@ -6,11 +6,17 @@ ru:
       question: "Вопрос"
       category: "Категория"
       user: "Пользователь"
+      badge: "Ачивка"
+      badge_rule: Правило
 
     attributes:
       test:
         title: "Название"
         category: "Категория"
+      badge:
+        title: "Название"
+        image_url: URL картинки
+        badge_rule_id: Правило
       answer:
         body: "Тело"
         correct: "Верный"

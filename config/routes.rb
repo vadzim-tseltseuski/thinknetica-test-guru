@@ -19,10 +19,13 @@ Rails.application.routes.draw do
   end
 
   resources :gists, only: :create
+  get 'badges/user_badges', to: "badges#user_badges", as: "user_badges"
 
   resource :feedback, only: %i[show create]
 
   namespace :admin do
+    resources :badges
+
     resources :tests do
       patch :update_inline, on: :member
 

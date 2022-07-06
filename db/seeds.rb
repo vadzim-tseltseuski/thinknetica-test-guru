@@ -24,6 +24,7 @@ NUMBER_USERS = 20
 NUMBER_OF_QUESTIONS = 100
 
 Answer.delete_all
+Gist.delete_all
 Question.delete_all
 Test.delete_all
 User.delete_all
@@ -65,5 +66,22 @@ questions.each do |question|
   Answer.create!(body: Faker::Games::WorldOfWarcraft.hero, correct: true, question: question)
 end
 puts 'Answer created'
+
+badge_rules = BadgeRule.create([
+  { rule_type: 'category_complete'},
+  { rule_type: 'first_try_complete'},
+  { rule_type: 'level_complete'}
+])
+
+badges = Badge.create([
+  { title: 'Category complete successfully!', image_url: "https://cdn-icons-png.flaticon.com/512/4105/4105454.png", badge_rule: badge_rules[0]},
+  { title: 'Fist try!', image_url: "https://cdn-icons-png.flaticon.com/512/4105/4105444.png", badge_rule: badge_rules[1]},
+  { title: 'Complete all test by level!', image_url: "https://cdn-icons-png.flaticon.com/512/4105/4105445.png", badge_rule: badge_rules[2]}
+])
+
+id = User.where(email: ENV['ADMIN_EMAIL']).first.id
+UserBadge.create([
+  {user_id: id, badge_id: 1}, {user_id: id, badge_id: 2}, {user_id: id, badge_id: 3}
+])
 
 users.each(&:confirm)
