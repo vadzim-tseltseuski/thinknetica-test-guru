@@ -1,0 +1,24 @@
+<div class="row">
+  <div class="col-12">
+  <p>
+    <%= link_to t('.new_badge'), new_admin_badge_path, class: "btn btn-primary" %>
+  </p>
+    <h2><%= t('.header')%></h2>
+
+    <%= render 'shared/errors', resource: @badge %>
+    <table class="table table-image">
+      <thead>
+        <tr class="table-primary">
+          <th scope="col"><%= t('.title') %></th>
+          <th scope="col"><%= t('.badge') %></th>
+          <th scope="col"><%= t('.type') %></th>
+          <th scope="col"><%= t('.option') %></th>
+          <th scope="col" style="text-align: center" colspan="3"><%= t('.action') %></th>
+        </tr>
+       </thead>
+       <tbody>
+      <%= render @badges %>
+      </tbody>
+    </table>
+  </div>
+</div>

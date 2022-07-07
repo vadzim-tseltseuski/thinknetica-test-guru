@@ -20,10 +20,11 @@
 NUMBER_OF_CATEGORIES = 5
 NUBER_OF_LEVELS = 5
 NUMBER_OF_TESTS = 20
-NUMBER_USERS = 20
+NUMBER_USERS = 5
 NUMBER_OF_QUESTIONS = 100
 
 Answer.delete_all
+Gist.delete_all
 Question.delete_all
 Test.delete_all
 User.delete_all
@@ -66,4 +67,27 @@ questions.each do |question|
 end
 puts 'Answer created'
 
+Badge.create!([
+  { title: 'Category complete successfully!',
+    image_url: "https://cdn-icons-png.flaticon.com/512/4105/4105454.png",
+    rule: "category_complete",
+    rule_option: 1
+  },
+  { title: 'Fist try!',
+    image_url: "https://cdn-icons-png.flaticon.com/512/4105/4105444.png",
+    rule: "first_try_complete"
+  },
+  { title: 'Complete all test by level!',
+    image_url: "https://cdn-icons-png.flaticon.com/512/4105/4105445.png",
+    rule: "level_complete",
+    rule_option: 3
+  }
+])
+
+id = User.where(email: ENV['ADMIN_EMAIL']).first.id
+UserBadge.create!([
+  {user_id: id, badge_id: 1}, {user_id: id, badge_id: 2}, {user_id: id, badge_id: 3}
+])
+
+admin.confirm
 users.each(&:confirm)

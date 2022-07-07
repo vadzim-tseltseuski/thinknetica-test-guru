@@ -1,0 +1,18 @@
+<div class="row">
+  <div class="col-12">
+    <h2><%= t('.header')%></h2>
+
+    <%= render 'shared/errors', resource: @badge %>
+    <table class="table table-image">
+      <thead>
+        <tr class="table-primary">
+          <th scope="col"><%= t('.title') %></th>
+          <th scope="col"><%= t('.badge') %></th>
+        </tr>
+       </thead>
+       <tbody>
+      <%= render @badges %>
+      </tbody>
+    </table>
+  </div>
+</div>
