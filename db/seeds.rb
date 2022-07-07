@@ -19,7 +19,7 @@
 
 NUMBER_OF_CATEGORIES = 5
 NUBER_OF_LEVELS = 5
-NUMBER_OF_TESTS = 20
+NUMBER_OF_TESTS = 17
 NUMBER_USERS = 5
 NUMBER_OF_QUESTIONS = 100
 
@@ -51,6 +51,15 @@ NUMBER_OF_TESTS.times do
                         author: admin)
 end
 puts 'Test created'
+
+3.times do
+  tests << Test.create!(title: "#{Faker::Educator.unique.subject}_timer",
+                        level: rand(1..NUBER_OF_LEVELS),
+                        category: categories.sample,
+                        timer: 1,
+                        author: admin)
+end
+puts 'Test with timer created'
 
 questions = []
 NUMBER_OF_QUESTIONS.times do

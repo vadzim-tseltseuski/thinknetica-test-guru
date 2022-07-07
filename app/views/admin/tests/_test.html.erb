@@ -5,6 +5,7 @@
   </td>
   <td style="text-align: center"><%= test.level %></td>
   <td style="text-align: center"><%= test.questions.count %></td>
+  <td style="text-align: center"><%= test.timer || "∞" %></td>
   <td style="text-align: center"><%= link_to t('.show'), admin_test_path(test), class: 'btn btn-primary', display: 'inline-block' %></td>
   <td style="text-align: center">
     <%= link_to t('.edit'),

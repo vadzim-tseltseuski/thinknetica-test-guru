@@ -47,6 +47,7 @@ ru:
       title: "Название"
       level: "Уровень"
       questions_count: "Количество вопросов"
+      timer: "Таймер"
       actions: "Действия"
       start: "Начать"
 
@@ -55,6 +56,8 @@ ru:
       header: Прохождение теста %{title}
       next: Следующий
       gist: Сохранить в Gist этот вопрос
+      timer_header: Таймер
+      timer_message: Необходимо ответить на все вопросы в отведенное время!!
     result:
       header: "Тест: %{title} пройден"
       message: Правильных ответов %{correct_questions} из %{count}
@@ -148,6 +151,7 @@ ru:
         level: "Уровень"
         questions_count: "Количество вопросов"
         actions: "Действия"
+        timer: Таймер
         no_tests: "У вас нет созданных тестов"
         add_new: "Добавить новый тест"
       show:

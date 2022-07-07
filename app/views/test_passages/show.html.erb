@@ -20,5 +20,18 @@
   <% end %>
   <p><%= link_to t('.gist'), gists_path(test_passage_id: @test_passage.id), method: :post %></p>
 
-  <p><%= form.submit t('.next') %></p>
+  <p><%= form.submit t('.next'), id: "submit-with-timer"%></p>
+<% end %>
+
+<% if @test_passage.test.timer %>
+  <div class="row justify-content-center mt-5 mb-2">
+      <h2><%= t('.timer_header') %></h2>
+  </div>
+ <%= tag.div class: "row justify-content-center border rounded-pill",
+                           id: "countdown",
+                           data: { finish_time: (@test_passage.created_at.to_i + @test_passage.test.timer) * 1000} %>
+<div class="row justify-content-center mt-2">
+  <p><%= t('.timer_message') %></p>
+</div>
+
 <% end %>

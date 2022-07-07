@@ -17,7 +17,7 @@ class TestPassage < ApplicationRecord
   end
 
   def completed?
-    current_question.nil?
+    current_question.nil? || timer_expired?
   end
 
   def result
@@ -26,6 +26,10 @@ class TestPassage < ApplicationRecord
 
   def success?
     result >= SUCCESS_RATE
+  end
+
+  def timer_expired?
+    test.timer? && (created_at + test.timer).past?
   end
 
   def current_question_number
