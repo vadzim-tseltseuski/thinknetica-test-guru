@@ -75,6 +75,7 @@ en:
       title: "Title"
       level: "Level"
       questions_count: "Questions count"
+      timer: Timer
       actions: "Actions"
       no_tests: "You don't have any tests"
       start: "Start"
@@ -84,6 +85,8 @@ en:
       header: Passing the %{title} test
       next: Next
       gist: Gist this question
+      timer_header: Timer
+      timer_message: Run, Forrest, Run!
     result:
       header: "Test: %{title} was completed"
       message: Correct answer %{correct_questions} from %{count}
@@ -170,6 +173,7 @@ en:
         title: "Title"
         level: "Level"
         questions_count: "Questions count"
+        timer: Timer
         actions: "Actions"
         no_tests: "You don't have any tests"
         add_new: "Add new test"
