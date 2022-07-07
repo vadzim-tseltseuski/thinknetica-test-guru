@@ -3,13 +3,13 @@ class BadgeIssue::Checker
     new.satisfied_badges(test_passage)
   end
 
-  private
-
   def satisfied_badges(test_passage)
     @badges = Badge.select do |badge|
       is_satisfied?(badge)
     end
   end
+
+  private
 
   def is_satisfied?(badge)
     rule_class = "badge_issue/rule/#{badge.rule.downcase}".camelize.constantize
